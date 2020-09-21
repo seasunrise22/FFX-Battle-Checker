@@ -2,22 +2,18 @@ package com.example.ffx_battle_checker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 public class SelectActivity extends AppCompatActivity {
-    boolean isSelected01 = false;
-    boolean isSelected02 = false;
-    boolean isSelected03 = false;
-    boolean isSelected04 = false;
-    boolean isSelected05 = false;
-    boolean isSelected06 = false;
-    boolean isSelected07 = false;
+    boolean[] isSelected = new boolean[7];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +26,12 @@ public class SelectActivity extends AppCompatActivity {
         textView01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!isSelected01) {
+                if(!isSelected[0]) {
                     v.setBackgroundColor(Color.BLUE);
-                    isSelected01 = true;
+                    isSelected[0] = true;
                 } else {
                     v.setBackgroundColor(Color.GRAY);
-                    isSelected01 = false;
+                    isSelected[0] = false;
                 }
             }
         });
@@ -46,12 +42,12 @@ public class SelectActivity extends AppCompatActivity {
         textView02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!isSelected02) {
+                if(!isSelected[1]) {
                     v.setBackgroundColor(Color.BLUE);
-                    isSelected02 = true;
+                    isSelected[1] = true;
                 } else {
                     v.setBackgroundColor(Color.GRAY);
-                    isSelected02 = false;
+                    isSelected[1] = false;
                 }
             }
         });
@@ -62,12 +58,12 @@ public class SelectActivity extends AppCompatActivity {
         textView03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!isSelected03) {
+                if(!isSelected[2]) {
                     v.setBackgroundColor(Color.BLUE);
-                    isSelected03 = true;
+                    isSelected[2] = true;
                 } else {
                     v.setBackgroundColor(Color.GRAY);
-                    isSelected03 = false;
+                    isSelected[2] = false;
                 }
             }
         });
@@ -78,12 +74,12 @@ public class SelectActivity extends AppCompatActivity {
         textView04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!isSelected04) {
+                if(!isSelected[3]) {
                     v.setBackgroundColor(Color.BLUE);
-                    isSelected04 = true;
+                    isSelected[3] = true;
                 } else {
                     v.setBackgroundColor(Color.GRAY);
-                    isSelected04 = false;
+                    isSelected[3] = false;
                 }
             }
         });
@@ -94,12 +90,12 @@ public class SelectActivity extends AppCompatActivity {
         textView05.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!isSelected05) {
+                if(!isSelected[4]) {
                     v.setBackgroundColor(Color.BLUE);
-                    isSelected05 = true;
+                    isSelected[4] = true;
                 } else {
                     v.setBackgroundColor(Color.GRAY);
-                    isSelected05 = false;
+                    isSelected[4] = false;
                 }
             }
         });
@@ -110,12 +106,12 @@ public class SelectActivity extends AppCompatActivity {
         textView06.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!isSelected06) {
+                if(!isSelected[5]) {
                     v.setBackgroundColor(Color.BLUE);
-                    isSelected06 = true;
+                    isSelected[5] = true;
                 } else {
                     v.setBackgroundColor(Color.GRAY);
-                    isSelected06 = false;
+                    isSelected[5] = false;
                 }
             }
         });
@@ -126,15 +122,36 @@ public class SelectActivity extends AppCompatActivity {
         textView07.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!isSelected07) {
+                if(!isSelected[6]) {
                     v.setBackgroundColor(Color.BLUE);
-                    isSelected07 = true;
+                    isSelected[6] = true;
                 } else {
                     v.setBackgroundColor(Color.GRAY);
-                    isSelected07 = false;
+                    isSelected[6] = false;
                 }
             }
         });
 
+        //선택완료 버튼 눌렀을 경우 반응
+        Button submitBtn = (Button)findViewById(R.id.buttonSubmit);
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            int num ;
+            int i;
+
+            @Override
+            public void onClick(View v) {
+                num = 0;
+                i = 0;
+                while(i < 7) {
+                    if (isSelected[i])
+                        num++;
+                    i++;
+                }
+                //Toast.makeText(v.getContext(), Integer.toString(num), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), BattleActivity.class);
+                intent.putExtra("count", num);
+                startActivity(intent);
+            }
+        });
     }
 }

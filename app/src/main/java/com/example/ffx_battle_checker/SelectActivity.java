@@ -136,20 +136,46 @@ public class SelectActivity extends AppCompatActivity {
         Button submitBtn = (Button)findViewById(R.id.buttonSubmit);
         submitBtn.setOnClickListener(new View.OnClickListener() {
             int num ;
-            int i;
+            //선택된 캐릭터는 무엇인가? 담을 배열
+            String[] name;
 
             @Override
             public void onClick(View v) {
-                num = 0;
-                i = 0;
-                while(i < 7) {
-                    if (isSelected[i])
+                num = 0; //선택된 개체가 몇 개 인가? 개수를 담을 변수
+                name = new String[7]; //선택된 개체가 무엇인가? 담을 배열
+
+                for(int i=0; i<isSelected.length; i++) {
+                    if (isSelected[i]) {
+                        switch(i) {
+                            case 0:
+                                name[num] = "티다";
+                                break;
+                            case 1:
+                                name[num] = "유우나";
+                                break;
+                            case 2:
+                                name[num] = "와카";
+                                break;
+                            case 3:
+                                name[num] = "루루";
+                                break;
+                            case 4:
+                                name[num] = "키마리";
+                                break;
+                            case 5:
+                                name[num] = "류크";
+                                break;
+                            case 6:
+                                name[num] = "아론";
+                                break;
+                        }
                         num++;
-                    i++;
-                }
-                //Toast.makeText(v.getContext(), Integer.toString(num), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+//                Toast.makeText(v.getContext(), Integer.toString(num), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(v.getContext(), BattleActivity.class);
                 intent.putExtra("count", num);
+                intent.putExtra("name", name);
                 startActivity(intent);
             }
         });

@@ -22,15 +22,15 @@ public class SelectActivity extends AppCompatActivity {
 
         //티다
         TextView textView01 = (TextView) findViewById(R.id.button01) ;
-        textView01.setBackgroundColor(Color.GRAY);
+        textView01.setBackgroundColor(Color.parseColor("#D4F4FA"));
         textView01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!isSelected[0]) {
-                    v.setBackgroundColor(Color.BLUE);
+                    v.setBackgroundColor(Color.parseColor("#FFE400"));
                     isSelected[0] = true;
                 } else {
-                    v.setBackgroundColor(Color.GRAY);
+                    v.setBackgroundColor(Color.parseColor("#D4F4FA"));
                     isSelected[0] = false;
                 }
             }
@@ -38,15 +38,15 @@ public class SelectActivity extends AppCompatActivity {
 
         //유우나
         TextView textView02 = (TextView) findViewById(R.id.button02) ;
-        textView02.setBackgroundColor(Color.GRAY);
+        textView02.setBackgroundColor(Color.parseColor("#D4F4FA"));
         textView02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!isSelected[1]) {
-                    v.setBackgroundColor(Color.BLUE);
+                    v.setBackgroundColor(Color.parseColor("#FFE400"));
                     isSelected[1] = true;
                 } else {
-                    v.setBackgroundColor(Color.GRAY);
+                    v.setBackgroundColor(Color.parseColor("#D4F4FA"));
                     isSelected[1] = false;
                 }
             }
@@ -54,15 +54,15 @@ public class SelectActivity extends AppCompatActivity {
 
         //와카
         TextView textView03 = (TextView) findViewById(R.id.button03) ;
-        textView03.setBackgroundColor(Color.GRAY);
+        textView03.setBackgroundColor(Color.parseColor("#D4F4FA"));
         textView03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!isSelected[2]) {
-                    v.setBackgroundColor(Color.BLUE);
+                    v.setBackgroundColor(Color.parseColor("#FFE400"));
                     isSelected[2] = true;
                 } else {
-                    v.setBackgroundColor(Color.GRAY);
+                    v.setBackgroundColor(Color.parseColor("#D4F4FA"));
                     isSelected[2] = false;
                 }
             }
@@ -70,15 +70,15 @@ public class SelectActivity extends AppCompatActivity {
 
         //루루
         TextView textView04 = (TextView) findViewById(R.id.button04) ;
-        textView04.setBackgroundColor(Color.GRAY);
+        textView04.setBackgroundColor(Color.parseColor("#D4F4FA"));
         textView04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!isSelected[3]) {
-                    v.setBackgroundColor(Color.BLUE);
+                    v.setBackgroundColor(Color.parseColor("#FFE400"));
                     isSelected[3] = true;
                 } else {
-                    v.setBackgroundColor(Color.GRAY);
+                    v.setBackgroundColor(Color.parseColor("#D4F4FA"));
                     isSelected[3] = false;
                 }
             }
@@ -86,15 +86,15 @@ public class SelectActivity extends AppCompatActivity {
 
         //키마리
         TextView textView05 = (TextView) findViewById(R.id.button05) ;
-        textView05.setBackgroundColor(Color.GRAY);
+        textView05.setBackgroundColor(Color.parseColor("#D4F4FA"));
         textView05.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!isSelected[4]) {
-                    v.setBackgroundColor(Color.BLUE);
+                    v.setBackgroundColor(Color.parseColor("#FFE400"));
                     isSelected[4] = true;
                 } else {
-                    v.setBackgroundColor(Color.GRAY);
+                    v.setBackgroundColor(Color.parseColor("#D4F4FA"));
                     isSelected[4] = false;
                 }
             }
@@ -102,15 +102,15 @@ public class SelectActivity extends AppCompatActivity {
 
         //류크
         TextView textView06 = (TextView) findViewById(R.id.button06) ;
-        textView06.setBackgroundColor(Color.GRAY);
+        textView06.setBackgroundColor(Color.parseColor("#D4F4FA"));
         textView06.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!isSelected[5]) {
-                    v.setBackgroundColor(Color.BLUE);
+                    v.setBackgroundColor(Color.parseColor("#FFE400"));
                     isSelected[5] = true;
                 } else {
-                    v.setBackgroundColor(Color.GRAY);
+                    v.setBackgroundColor(Color.parseColor("#D4F4FA"));
                     isSelected[5] = false;
                 }
             }
@@ -118,15 +118,15 @@ public class SelectActivity extends AppCompatActivity {
 
         //아론
         TextView textView07 = (TextView) findViewById(R.id.button07) ;
-        textView07.setBackgroundColor(Color.GRAY);
+        textView07.setBackgroundColor(Color.parseColor("#D4F4FA"));
         textView07.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!isSelected[6]) {
-                    v.setBackgroundColor(Color.BLUE);
+                    v.setBackgroundColor(Color.parseColor("#FFE400"));
                     isSelected[6] = true;
                 } else {
-                    v.setBackgroundColor(Color.GRAY);
+                    v.setBackgroundColor(Color.parseColor("#D4F4FA"));
                     isSelected[6] = false;
                 }
             }

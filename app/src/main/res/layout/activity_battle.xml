@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="0.8"
+    android:padding="8dp"
     tools:context=".BattleActivity">
 
     <LinearLayout
@@ -25,9 +26,10 @@
         android:layout_weight="0.1">
 
         <Button
+            android:id="@+id/btnReset"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="전투종료"
+            android:text="초기화"
             >
 
         </Button>

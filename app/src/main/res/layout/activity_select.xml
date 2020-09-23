@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:padding="10dp"
     android:weightSum="0.75"
@@ -26,7 +26,7 @@
             android:gravity="center"
             android:text="티다"
             android:textSize="28dp"
-            android:textColor="#FFFFFF" />
+            />
 
         <TextView
             android:id="@+id/button02"
@@ -36,8 +36,7 @@
             android:layout_weight="0.25"
             android:gravity="center"
             android:text="유우나"
-            android:textSize="28dp"
-            android:textColor="#FFFFFF" />
+            android:textSize="28dp" />
 
         <TextView
             android:id="@+id/button03"
@@ -47,8 +46,7 @@
             android:layout_weight="0.25"
             android:gravity="center"
             android:text="와카"
-            android:textSize="28dp"
-            android:textColor="#FFFFFF" />
+            android:textSize="28dp" />
 
         <TextView
             android:id="@+id/button04"
@@ -58,8 +56,7 @@
             android:layout_weight="0.25"
             android:gravity="center"
             android:text="루루"
-            android:textSize="28dp"
-            android:textColor="#FFFFFF" />
+            android:textSize="28dp" />
 
     </LinearLayout>
 
@@ -78,8 +75,7 @@
             android:layout_weight="0.25"
             android:gravity="center"
             android:text="키마리"
-            android:textSize="28dp"
-            android:textColor="#FFFFFF" />
+            android:textSize="28dp" />
 
         <TextView
             android:id="@+id/button06"
@@ -89,8 +85,7 @@
             android:layout_weight="0.25"
             android:gravity="center"
             android:text="류크"
-            android:textSize="28dp"
-            android:textColor="#FFFFFF" />
+            android:textSize="28dp" />
 
         <TextView
             android:id="@+id/button07"
@@ -100,8 +95,7 @@
             android:layout_weight="0.25"
             android:gravity="center"
             android:text="아론"
-            android:textSize="28dp"
-            android:textColor="#FFFFFF" />
+            android:textSize="28dp" />
 
     </LinearLayout>
 
